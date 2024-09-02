@@ -200,3 +200,4 @@ function endGame() {
     `;
     document.getElementById('game-text').innerText = `Congratulations, ${playerName}! You've completed the scavenger hunt and unlocked the secrets of the digital world! Raise your hand and show this page to Mr. March-Steinman for full credit and a small prize.`;
     document.getElementById('user-input').style.display = 'none';
+}

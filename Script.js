@@ -179,13 +179,6 @@ function showQuestion() {
     }
 }
 
-document.getElementById('user-input').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
-        checkAnswer(this.value.toLowerCase().trim());
-        this.value = ''; // Clear the input
-    }
-});
-
 function checkAnswer(answer) {
     const correctAnswers = story[currentQuestionIndex].answers;
     if (correctAnswers.some(correctAnswer => answer.includes(correctAnswer))) {

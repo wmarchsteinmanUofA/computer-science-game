@@ -159,6 +159,12 @@ function startGame() {
         document.getElementById('user-input').style.display = 'block'; // Show answer input
         document.getElementById('game-text').innerText = `Welcome, ${playerName}! Your adventure begins now.`;
         currentQuestionIndex = 0; // Reset question index
+        document.getElementById('user-input').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                checkAnswer(this.value.toLowerCase().trim());
+                this.value = ''; // Clear the input
+            }
+        });
         setTimeout(showQuestion, 2000); // Delay to show greeting before the first question
     }
 }
